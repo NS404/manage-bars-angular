@@ -1,0 +1,14 @@
+<div class="d-flex align-items-center justify-content-between px-4">
+    <div class="d-flex align-items-center">
+                <i class=" fab fa-2x cc-color-visa">{{order.total.toLocaleString()}}</i>
+        <div class="border-left pl-1 ml-2 ms-4">
+            <div class="small">{{order.date}}</div>
+            <div class="text-xs text-muted">{{order.time}}</div>
+        </div>
+    </div>
+    <div class="ms-4 small">
+        <!-- <div class="badge bg-light text-dark me-3">Default</div> -->
+        <button class="button-23" (click)="onDetailsRequest(order)" type="button">Detaje</button>
+    </div>
+</div>
+<hr>

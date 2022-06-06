@@ -1,0 +1,11 @@
+<hr>
+<div class="card card-header-actions mb-4">
+    <div class="card-header">
+       Porosite
+    </div>
+    <div class="card-body-orders px-0">
+        <!--order-item-->
+        <app-order-item *ngFor="let order of orders" [order]="order" (orderDetailsRequest)="selectOrder(order)"></app-order-item>
+    </div>
+    <app-order-details *ngIf="selectedOrder !== undefined " [orderList] ="selectedOrder.orderList"></app-order-details>
+</div>

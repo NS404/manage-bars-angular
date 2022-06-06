@@ -1,0 +1,26 @@
+<div class="card mb-4">
+    <div class="card-header">Detajet</div>
+    <div class="card-body p-0">
+        <!-- Billing history table-->
+        <div class="table-responsive table-billing-history">
+            <table class="table mb-0">
+                <thead>
+                    <tr>
+                        <th class="border-gray-200" scope="col">nr</th>
+                        <th class="border-gray-200" scope="col">produkti</th>
+                        <th class="border-gray-200" scope="col">sasia</th>
+                        <th class="border-gray-200" scope="col">nentotali</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let suborder of orderList">
+                        <td>{{suborder.no}}</td> 
+                        <td>{{suborder.product.name}}</td>
+                        <td>{{suborder.quantity}}</td>
+                        <td>{{suborder.subtotal.toLocaleString()}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

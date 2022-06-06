@@ -1,0 +1,10 @@
+    <div  [ngClass]="shift.finished ? 'border-start-primary' : 'border-start-success'" class="card h-100 border-start-lg ">
+        <div class="card-body">
+            <div class="medium text-muted"><fa-icon [icon]="dollarSignIcon" ></fa-icon> {{shift.total.toLocaleString()}}</div>
+            <div class="h3"><fa-icon class="user-icon" [icon]="userIcon" ></fa-icon> {{shift.user.name}}</div>
+            <button class="button-23" role="button" (click)="showOrdersAction()" >
+                {{ordersShown? "Mbyll":"Shfaq Porosite"}}
+            </button>
+            <app-orders *ngIf="ordersShown" [orders] = "shift.orders"></app-orders>
+        </div>
+    </div>
